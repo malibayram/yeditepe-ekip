@@ -281,8 +281,8 @@ footer {
 /* CTA Button */
 .cta-button {
   background: var(--accent-color);
+  border: 1px solid #7395c1; 
   color: white;
-  border: none;
   padding: 1.2rem 2.4rem;
   font-size: 1.2rem;
   border-radius: 1rem;
@@ -394,4 +394,115 @@ footer {
   .requirement-card {
     padding: 1.5rem;
   }
+}
+
+
+
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid #7395c1; 
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+
+
+.yaz-calismalari-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  margin-top: 1rem;
+  list-style: none;
+}
+
+.yaz-calismalari-list li {
+  background: var(--card-bg, #f9f9f9);
+  border: 1px solid #e0e0e0;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  color: var(--text-secondary, #333);
+  font-weight: 500;
+  min-width: 200px;
+  flex: 1 1 auto;
+  white-space: normal;
+  position: relative;
+}
+
+/* Optional: remove the arrow from only this section */
+.yaz-calismalari-list li::before {
+  display: none;
+}
+
+.yaz-calismalari-list li::before {
+  content: "✔";
+  position: absolute;
+  left: -1.5rem;
+  color: green;
+  font-weight: bold;
+}
+
+
+.topics-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.topic-box {
+  background-color: #f9f9f9;
+  border: 1px solid var(--accent-color);
+  border-radius: 12px;
+  padding: 1rem;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.topic-box:hover {
+  transform: translateY(-4px);
+}
+
+.topic-box h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: var(--accent-color);
+}
+
+.topic-box p {
+  margin: 0.5rem 0 0;
+  color: var(--text-secondary);
+}
+
+
+.topic-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.topic-box li::before {
+  content: "•"; /* or any other symbol */
+  color: var(--accent-color);
+  display: inline-block;
+  width: 1rem;
+  margin-left: 0rem;
+}
+
+.topics-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* This centers the boxes horizontally */
+  gap: 1.5rem; /* Adds spacing between the boxes */
+  padding: 1rem 0;
 }
